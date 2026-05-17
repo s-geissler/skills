@@ -6,7 +6,7 @@ A collection of agent skills and a delegation helper for offloading LLM work.
 
 | Path | Purpose |
 |------|---------|
-| `bin/delegate.py` | CLI tool to dispatch LLM queries via opencode (`ask`, `write`, `review`) |
+| `bin/opencode-delegate.py` | CLI tool to dispatch LLM queries via opencode (`ask`, `write`, `review`) |
 | `opencode-delegate/SKILL.md` | Skill docs for the **delegate** skill — bulk analysis & boilerplate generation |
 | `opencode-review/SKILL.md` | Skill docs for the **opencode-review** skill — external code review against PRDs/issues |
 

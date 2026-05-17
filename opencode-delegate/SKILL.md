@@ -5,20 +5,20 @@ description: Delegate basic tasks to a simple and cheap model using opencode one
 
 # Delegation Skill
 
-Use `/bin/opencode-delegate.py` to dispatch heavy LLM work via the opencode CLI instead of burning your own context window.
+Use `../bin/opencode-delegate.py` to dispatch heavy LLM work via the opencode CLI instead of burning your own context window.
 
 ## Commands
 
 ### ask — bulk file analysis
 ```bash
-./bin/opencode-delegate.py ask --paths <file>... --question "<question>"
+../bin/opencode-delegate.py ask --paths <file>... --question "<question>"
 ```
 Use when reading >400 lines or 3+ files. Returns a structured summary. Prefer this over reading files yourself.
 Use the "Reviewer" agent for these delegations.
 
 ### write — boilerplate generation
 ```bash
-./bin/opencode-delegate.py write --spec "<what to generate>" --target <output> [--context <ref>...] [--overwrite]
+../bin/opencode-delegate.py write --spec "<what to generate>" --target <output> [--context <ref>...] [--overwrite]
 ```
 Use for tests, config files, docstrings, repetitive patterns. Review output and edit only what needs fixing.
 Use the "Dev" agent for these delegations.
