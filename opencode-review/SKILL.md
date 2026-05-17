@@ -5,13 +5,13 @@ description: Delegate code reviews to an external model instead of doing self-re
 
 # Opencode Review
 
-Use `delegate.py` to dispatch external review work. delegate.py is in the PATH and needs to be run outside the sandbox.
+Use `./bin/opencode-delegate.py` to dispatch external review work.
 
 ## Commands
 
 ### review — code review against requirements
 ```bash
-./delegate.py review --against <prd_or_issue_file> [--diff <patch>] [--paths <file>...] [--staged]
+./bin/opencode-delegate.py review --against <prd_or_issue_file> [--diff <patch>] [--paths <file>...] [--staged]
 ```
 Use to verify code changes satisfy a PRD or issue document. Defaults to `git diff HEAD`; pass `--staged` to review staged changes only. Pass `--diff` to review a saved patch file, or `--paths` to review specific files. Returns exit code 1 if the review verdict is FAIL.
 Use the "Reviewer" agent for these delegations.

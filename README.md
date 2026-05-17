@@ -7,7 +7,7 @@ A collection of agent skills and a delegation helper for offloading LLM work.
 | Path | Purpose |
 |------|---------|
 | `bin/delegate.py` | CLI tool to dispatch LLM queries via opencode (`ask`, `write`, `review`) |
-| `delegate/SKILL.md` | Skill docs for the **delegate** skill — bulk analysis & boilerplate generation |
+| `opencode-delegate/SKILL.md` | Skill docs for the **delegate** skill — bulk analysis & boilerplate generation |
 | `opencode-review/SKILL.md` | Skill docs for the **opencode-review** skill — external code review against PRDs/issues |
 
 ## `delegate.py`
@@ -15,15 +15,15 @@ A collection of agent skills and a delegation helper for offloading LLM work.
 A small Python wrapper around `opencode run` for three common workflows:
 
 - **`ask`** — analyse files and answer questions  
-  `./delegate.py ask --paths src/*.py --question "What does this module do?"`
+  `opencode-delegate.py ask --paths src/*.py --question "What does this module do?"`
 
 - **`write`** — generate boilerplate from a spec  
-  `./delegate.py write --spec "A pytest test for User.login" --target tests/test_user.py`
+  `opencode-delegate.py write --spec "A pytest test for User.login" --target tests/test_user.py`
 
 - **`review`** — review code changes against a requirements doc  
-  `./delegate.py review --against docs/PRD-123.md --staged`
+  `opencode-delegate.py review --against docs/PRD-123.md --staged`
 
-Run `./delegate.py --help` for full options.
+Run `opencode-delegate.py --help` for full options.
 
 ## Skills
 
